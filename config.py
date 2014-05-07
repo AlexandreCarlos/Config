@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+from __future__ import (absolute_import, division, print_function, unicode_literals)
 """
     flask.config
     ~~~~~~~~~~~~
@@ -17,6 +17,7 @@ import errno
 
 # from utils import import_string
 from _compat import string_types
+from Singleton import SingletonType
 
 
 def import_string(import_name, silent=False):
@@ -125,6 +126,8 @@ class Config(dict):
                       the application's :attr:`~flask.Flask.root_path`.
     :param defaults: an optional dictionary of default values
     """
+
+    __metaclass__ = SingletonType
 
     def __init__(self, root_path, defaults=None):
         dict.__init__(self, defaults or {})
