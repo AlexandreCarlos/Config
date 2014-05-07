@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-
 __author__ = 'alexandre'
 
 import unittest
@@ -40,7 +37,6 @@ class Config_TestCase(unittest.TestCase):
                                 'JSON_SORT_KEYS':                       True,
                                 'JSONIFY_PRETTYPRINT_REGULAR':          True,
                                 })
-
 
     def test_CriaConfigObject(self):
         
